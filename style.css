@@ -7,12 +7,33 @@ body {
     color: #333;
   }
   
-  header {
-    text-align: center;
-    padding: 30px;
-    background: linear-gradient(135deg, #da981e, #ffd000);
-    color: white;
-  }
+.header {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #da981e, #ffd000);
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Căn giữa logo và tiêu đề theo chiều dọc */
+  justify-content: center; /* Căn giữa toàn bộ logo và tiêu đề */
+  gap: 10px; /* Khoảng cách giữa logo và tiêu đề */
+}
+
+.logo {
+  width: 60px; /* Kích thước logo */
+  height: 60px;
+  object-fit: contain; /* Đảm bảo logo giữ tỷ lệ */
+  border-radius: 8px; /* Tùy chọn: bo góc logo nếu cần */
+}
+
+.title {
+  font-size: 2.5rem; /* Kích thước tiêu đề */
+  font-weight: bold;
+  margin: 0;
+}
+
   
   header h1 {
     font-size: 2.5rem;
