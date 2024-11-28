@@ -4,14 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Lọc sản phẩm dựa trên từ khóa tìm kiếm
   searchBox.addEventListener("input", (e) => {
-    const searchTerm = e.target.value.toLowerCase();
+    const searchTerm = e.target.value.toLowerCase().trim(); // Từ khóa tìm kiếm, loại bỏ khoảng trắng
 
     products.forEach((product) => {
-      const productName = product.querySelector("p").textContent.toLowerCase();
-      if (productName.includes(searchTerm)) {
-        product.style.display = "block"; // Hiển thị sản phẩm nếu khớp
+      const productTitle = product.querySelector("h2")?.textContent.toLowerCase() || ""; // Tiêu đề sản phẩm
+      const productDescription = product.querySelector("p")?.textContent.toLowerCase() || ""; // Mô tả sản phẩm
+
+      // Hiển thị sản phẩm nếu tiêu đề hoặc mô tả khớp với từ khóa tìm kiếm
+      if (productTitle.includes(searchTerm) || productDescription.includes(searchTerm)) {
+        product.style.display = "block";
       } else {
-        product.style.display = "none"; // Ẩn sản phẩm nếu không khớp
+        product.style.display = "none";
       }
     });
   });
