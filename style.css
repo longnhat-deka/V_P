@@ -16,13 +16,6 @@ body {
   color: white; /* Văn bản trắng để nổi bật trên nền */
 }
 
-@media screen and (max-width: 768px) {
-  .header {
-    background-size: contain; /* Đảm bảo ảnh hiển thị đầy đủ trên màn hình nhỏ */
-  }
-}
-
-
 .logo-container {
 display: flex;
 align-items: center; /* Căn giữa logo và tiêu đề theo chiều dọc */
@@ -53,6 +46,7 @@ font-size: 2.5rem; /* Kích thước tiêu đề */
 font-weight: bold;
 margin: 0;
 }
+
 
 /* Đáp ứng cho thiết bị nhỏ */
 @media screen and (max-width: 768px) {
